@@ -1,1 +1,77 @@
-info here
+* { box-sizing: border-box;
+    margin: 0;}
+
+
+
+body{
+  font-family: Verdana, sans-serif;
+  font: black;
+}
+
+main{
+  background-color: #F5F5F5;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#cform{
+
+}
+
+.newanchor{
+  text-decoration: none;
+}
+
+a.newanchor:hover {
+  text-decoration: underline;
+  color: purple;
+}
+
+p.sec{
+  padding: 25px, 25px, 25px, 25px,
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input, select, textarea {
+color: #000000;
+}
+
+footer{
+  text-align: center;
+  background-color: #585858;
+  color: #E8E8E8;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+}
+
+ul li a {
+  padding: 8px;
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: underline;
+  color: #F5F5F5;
+}

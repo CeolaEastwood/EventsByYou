@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Events By You</title>
+
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="Ceola Eastwood" content="">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="modernizr.custom.05819.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"> events by you</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="security.html">Security</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <main>
+    <div class="container">
+      <h2>Feedback Form</h2>
+      <p class="sec">Have suggestions? We would love to hear from you!</p>
+      <form onsubmit="return validateForm();" action="http://localhost/EventsByYou/feedback.php" id="form" name="feedback" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="lname">Email:</label>
+          <input type="text" id="email" name="mail" placeholder="Your email..">
+          <label for="comment">Feedback:</label>
+          <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        </div>
+        <button id="myBtn" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </main>
+    <footer>
+      &copy; Copyright Events By You
+      <br>
+      123 Main St. Somewhere in the Universe, 42424-242
+      <br>
+      <br>
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="security.html">Security</a></li>
+        </ul>
+    </footer>
+    <script src="events.js"></script>
+  </body>
+</html>
