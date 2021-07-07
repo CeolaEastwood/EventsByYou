@@ -10,18 +10,35 @@
     <meta name="description" content="The HTML5 Herald">
     <meta name="Ceola Eastwood" content="">
     <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="modernizr.custom.05819.js"></script>
   </head>
-
   <body>
     <header>
-      <img src="woman.jpg" alt="Lady with coffee" width="100" height="100">
-      <h1>events by you</h1>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"> events by you</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="security.html">Security</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
   <main>
     <p>Grab your coffee. Plan your event. Conquer the...laundry?</p>
       <div>
+        <aside class="">
         <h3>Sign in</h3><br>
         <form class="" action="index.html" method="post">
           <label for="email">Email:</label><br>
@@ -31,6 +48,7 @@
           <input type="submit" value="Submit">
         </form>
         Sign up free  Forgot your password?
+        </aside>
       </div>
 
       description STUFF HERE

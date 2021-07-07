@@ -10,21 +10,48 @@
     <meta name="description" content="The HTML5 Herald">
     <meta name="Ceola Eastwood" content="">
     <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="modernizr.custom.05819.js"></script>
   </head>
-
   <body>
     <header>
-      <img src="woman.jpg" alt="Lady with coffee" width="100" height="100">
-      <h1>events by you</h1>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"> events by you</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="security.html">Security</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
   <main>
 
+    <section id="ticket">
+      <h3>Your Event!</h3>
+       <div id="dateSection">
+          <h4>Date</h4>
+          <p id="selectedDate"></p>
+       </div>
+       <div id="countdownSection">
+          <h4>Countdown to the big day!</h4>
+          <p id="countdown"></p>
+       </div>
+    </section>
 
-    <form class="" action="index.html" method="post">
-
-      <h4>What would you like to plan today?</h4>
+    <form class="" action="" method="post">
+      <fieldset>
+      <legend>Event Type:</legend>
         <input type="radio" id="Backyard Cookout" name="event" value="Backyard Cookout">
         <label for="Backyard Cookout">Backyard Cookout</label><br>
 
@@ -40,35 +67,198 @@
         <input type="radio" id="Corporate Event" name="event" value="Corporate Event">
         <label for="Corporate Event">Backyard Cookout</label><br>
 
-      <h4>Event Name?</h4>
-        <input type="text" id="eventname" name="eventname"><br>
+        <input type="radio" id="Other Event Type" name="event" value="Other Event Type">
+        <label for="Corporate Event">Backyard Cookout</label><br>
+        </fieldset>
 
-      <h4>Date and Time?</h4>
-        <label for="date">Date:</label><br>
-        <input type="date" id="date" name="date"><br>
+        <fieldset>
+        <legend>Event Name:</legend>
+        <input type="text" id="eventname" name="eventname" required="required"><br>
+        <label for="comment">Event Discription:</label>
+        <textarea class="form-control" rows="5" id="comment" name="text" required="required"></textarea>
+      </fieldset>
 
-        <label for="time">Time:</label><br>
-        <input type="text" id="time" name="time"><br>
+      <fieldset>
+         <legend>Date and Time:</legend>
 
-      <h4>Location?</h4>
-        <label for="location">Location:</label><br>
-        <input type="text" id="location" name="location"><br>
+         <input type="text" id="tripDate"/>
+         <label for="time">Time:</label><br>
+         <input type="text" id="time" name="time"/><br>
+        </fieldset>
 
-      <h4>How many people are invited?</h4>
+        <fieldset id="eventAddress" class="text">
+           <legend>Event Address:</legend>
+           <input id="eventLName" name="EventLastName" type="text" required="required" />
+           <label for="eventStreet">Street Address:</label>
+           <input id="eventStreet" name="EventStreet" type="text" required="required" />
+           <label for="eventCity">City:</label>
+           <input id="eventCity" name="EventCity" type="text" required="required" />
+           <label for="eventState">State:</label>
+           <select id="eventState" name="EventState" required="required">
+              <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="DC">DC</option>
+              <option value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+              <option value="IN">IN</option>
+              <option value="IA">IA</option>
+              <option value="KS">KS</option>
+              <option value="KY">KY</option>
+              <option value="LA">LA</option>
+              <option value="ME">ME</option>
+              <option value="MD">MD</option>
+              <option value="MA">MA</option>
+              <option value="MI">MI</option>
+              <option value="MN">MN</option>
+              <option value="MS">MS</option>
+              <option value="MO">MO</option>
+              <option value="MT">MT</option>
+              <option value="NE">NE</option>
+              <option value="NV">NV</option>
+              <option value="NH">NH</option>
+              <option value="NJ">NJ</option>
+              <option value="NM">NM</option>
+              <option value="NY">NY</option>
+              <option value="NC">NC</option>
+              <option value="ND">ND</option>
+              <option value="OH">OH</option>
+              <option value="OK">OK</option>
+              <option value="OR">OR</option>
+              <option value="PA">PA</option>
+              <option value="RI">RI</option>
+              <option value="SC">SC</option>
+              <option value="SD">SD</option>
+              <option value="TN">TN</option>
+              <option value="TX">TX</option>
+              <option value="UT">UT</option>
+              <option value="VT">VT</option>
+              <option value="VA">VA</option>
+              <option value="WA">WA</option>
+              <option value="WV">WV</option>
+              <option value="WI">WI</option>
+              <option value="WY">WY</option>
+           </select>
+           <label for="eventZip">Zip:</label>
+           <input id="eventZip" name="EventZip" type="number" required="required" />
+           <label for="eventPhone">Phone:</label>
+           <input id="eventPhone" name="EventPhone" type="number" required="required" />
+           <div class="errorMessage"></div>
+        </fieldset>
 
-        <input type="number" id="pplinvited" name="pplinvited"><br>
-
-
-      <h4>Do you need to charge an addmission fee or suggested donation?</h4>
+        <fieldset>
+          <legend>How many people are invited?</legend>
+          <input type="number" id="pplinvited" name="pplinvited"><br>
+          <h4>Do you need to charge an addmission fee or suggested donation?</h4>
         <input type="radio" id="yes" name="choice" value="yes">
         <label for="yes">Yes</label><br>
         <input type="radio" id="no" name="choice" value="no">
         <label for="No">No</label><br>
 
-        <label for="add_cost">Fee or Donation Cost</label><br>
+        <label for="add_cost">Fee or Donation Cost:</label><br>
         <input type="number" id="add_cost" name="add_cost"><br>
 
         <label><b>Estimated Total: </b></label>
         <input class="w3-input w3-border" name="tot_amount" id="tot_amount"
         type="text" readonly>
+          </fieldset>
+
+        <button id="myBtn" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div id="cal">
+         <div id="prev">&lt; previous</div>
+         <div id="next">next &gt;</div>
+         <table>
+            <caption></caption>
+            <tr>
+               <th>Sun</th>
+               <th>Mon</th>
+               <th>Tue</th>
+               <th>Wed</th>
+               <th>Thu</th>
+               <th>Fri</th>
+               <th>Sat</th>
+            </tr>
+            <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </table>
+         <p id="close">close <span>&#9746;</span></p>
+      </div>
+     </article>
+     <footer>
+       &copy; Copyright Events By You
+       <br>
+       123 Main St. Somewhere in the Universe, 42424-242
+       <br>
+       <br>
+         <ul>
+           <li><a href="feedback.html">Feedback</a></li>
+           <li><a href="contact.html">Contact Us</a></li>
+           <li><a href="security.html">Security</a></li>
+         </ul>
+     </footer>
+   <script src="events.js"></script>
+  <main>
+ </body>
 </html>
